@@ -1,7 +1,7 @@
 window.onload = function () {
     let game = new Phaser.Game(960, 600, Phaser.AUTO, 'game');
     game.state.add('play', MainState);
-    game.state.start('play', true, false, {level: 2});
+    game.state.start('play', true, false, {level: 0});
 };
 const volume = 1;
 const LEVEL = 4;
@@ -12,7 +12,7 @@ MainState.preload = function () {
     this.game.load.json('level:0', 'data/level00.json');
     this.game.load.json('level:1', 'data/level01.json');
     this.game.load.json('level:2', 'data/level02.json');
-    this.game.load.json('level:2', 'data/level03.json');
+    this.game.load.json('level:3', 'data/level03.json');
     this.game.load.image('font:numbers', 'images/numbers.png');
     this.game.load.image('background', 'images/background.svg');
     this.game.load.image('ground', 'images/ground2.png');
