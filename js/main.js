@@ -5,7 +5,8 @@ window.onload = function () {
 };
 const volume = 1;
 const LEVEL = 4;
-
+let swich = false;
+let crystalCount = 0;
 let MainState = {};
 
 MainState.preload = function () {
@@ -53,12 +54,10 @@ MainState.init = function (data) {
             this.msc.jump.play();
         }
     }, this);
-    this.crystalPickupCount = 0;
     this.hasKey = false;
     this.level = (data.level || 0) % LEVEL;
 };
 
-let swich = false;
 
 MainState.create = function () {
 
@@ -85,12 +84,11 @@ MainState.create = function () {
 	}
 };
 
-
 MainState.update = function () {
     this.collisionsControl();
     this.inputControl();
 
-    this.crystalFont.text = `x${this.crystalPickupCount}`;
+    this.crystalFont.text = `x${crystalCount}`;
     this.keyIcon.frame = this.hasKey ? 1 : 0;
 };
 
@@ -207,7 +205,7 @@ MainState.createKey = function (x, y) {
 MainState.hero_crystal = function (hero, crystal) {
     this.msc.crystal.play();
     crystal.kill();
-    this.crystalPickupCount++;
+    crystalCount++;
 };
 
 MainState.hero_enemy = function (hero, enemy) {
