@@ -1,0 +1,52 @@
+* {
+	font-family: cursive;
+    box-sizing: border-box;
+}
+.game{
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+button{
+	z-index: 1;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	background: #D8BF9E;
+	border-radius: 10px;
+}
+
+.overlay {
+	background: #000;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1000;
+	opacity: .5;
+}
+.visible {
+	background: #fff;
+	position: fixed;
+	left: 40%;
+	top: 40%;
+	margin-top: -200px;
+	overflow: hidden;
+	z-index: 2000;
+	width: 700px;
+	padding: 0px;
+	margin-left: -250px;
+}
+#info h2{
+	text-align: center;
+}
+
+.content {
+	padding: 0 1em;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: WhiteSmoke;
+}

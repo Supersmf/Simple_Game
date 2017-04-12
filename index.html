@@ -1,18 +1,30 @@
 <!doctype html>
 <head>
-    <title>HTML5 games workshop: One-screen platformer</title>
+    <title>In the Mood</title>
     <meta charset="utf-8">
-
+	<link href="css/style.css" rel="stylesheet">
     <script src="js/phaser.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/hero.js"></script>
     <script src="js/enemy.js"></script>
-    <style>
-        canvas {
-            margin: 0 auto;
-        }
-    </style>
 </head>
 <body>
-    <div id="game"></div>
+	<div class="wrapper">
+		<div id="game" class="game">
+			<button onClick="getElementById('info').removeAttribute('style');" 
+			type="button">Game Info</button>
+		</div>
+	</div>
+	<div id="info" style="display:none;">
+		<div class="overlay"></div>
+		<div class="visible">
+			<h2>In the Mood</h2>
+			<div class="content">
+				<img src="images/hero_controll.png" style="width:500px">
+				<img src="images/controll_key.png" style="width:150px">
+				<p>This is a simple platforming game called "In the mood." The goal of the game is to pick up the key and open the door to go to the next level. On the way you can collect crystals, just beware of the enemies (you can kill them by jumping on top of them, HB)</p>
+			</div>
+			<button type="button" onClick="getElementById('info').style.display='none';">Close</button>
+		</div>
+	</div>
 </body>
